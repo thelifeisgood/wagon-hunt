@@ -6,8 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.destroy_all
+#Product.destroy_all
+#User.destroy_all
 
-Product.create!(name: "Kudoz", url: "http://getkudoz.com", tagline:"Tinder for job search")
-Product.create!(name: "uSlide", url: "http://uslide.com", tagline:"Youtube sucks for education")
-Product.create!(name: "Medpics", url: "http://medpics.com", tagline:"Share your diagnostics")
+boris 	= User.create!(email: "boris@lewagon.org", password: "testtest")
+jhon 	= User.create!(email: "jhon@lewagon.org",  password: "testtest")
+
+Product.create!(user: boris, name: "Kudoz",   url: "http://getkudoz.com", tagline:"Tinder for job search",       category:"tech")
+Product.create!(user: boris, name: "uSlide",  url: "http://uslide.com",   tagline:"Youtube sucks for education", category:"tech")
+Product.create!(user: boris, name: "Medpics", url: "http://medpics.com",  tagline:"Share your diagnostics",      category:"tech")
