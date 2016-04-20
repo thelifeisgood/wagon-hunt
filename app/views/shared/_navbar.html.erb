@@ -1,4 +1,4 @@
-<div class="navbar-wagon">
+<div class="navbar-wagon"><% if user_signed_in? %>
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
     <%= image_tag "lewagon.png" %>
@@ -7,7 +7,7 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-  <% if user_signed_in? %>
+  
 
     <!-- Text link -->
     <%= link_to "All products", products_path, class:"navbar-wagon-item navbar-wagon-link" %>

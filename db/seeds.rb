@@ -10,8 +10,17 @@
 #User.destroy_all
 
 boris 	= User.create!(email: "boris@lewagon.org", password: "testtest")
-jhon 	= User.create!(email: "jhon@lewagon.org",  password: "testtest")
+seb 	= User.create!(email: "seb@lewagon.org",  password: "testtest")
 
-Product.create!(user: boris, name: "Kudoz",   url: "http://getkudoz.com", tagline:"Tinder for job search",       category:"tech")
-Product.create!(user: boris, name: "uSlide",  url: "http://uslide.com",   tagline:"Youtube sucks for education", category:"tech")
-Product.create!(user: boris, name: "Medpics", url: "http://medpics.com",  tagline:"Share your diagnostics",      category:"tech")
+kudoz = Product.create!(user: boris, name: "Kudoz",   url: "http://getkudoz.com", tagline:"Tinder for job search",       category:"tech")
+Product.create!(user: boris, name: "uSlide",  url: "http://uslide.com",   tagline:"Youtube sucks for education", category:"education")
+Product.create!(user: seb, name: "Medpics", url: "http://medpics.com",  tagline:"Share your diagnostics",      category:"tech")
+le_wagon = Product.create!(user: seb, name: "Le Wagon", url: "http://lewagon.com",  tagline:"We bring tech skills",      category:"education")
+
+# Upvotes?
+#Upvotes.create!(user: ?, product: ?)
+# or
+kudoz.upvotes.create! user: boris
+kudoz.upvotes.create! user: seb
+
+le_wagon.upvotes.create! user: seb
